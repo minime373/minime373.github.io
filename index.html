@@ -1,0 +1,456 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    	<title>Milestone 2</title>
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="initial-scale=1">
+    	<!-- Link to w3.css external style sheet -->
+     <link rel="stylesheet" type="text/css" href="docs/css/w3.css">
+
+     <link href="docs/css/jq.css" rel="stylesheet">
+     <!-- jQuery: required (tablesorter works with jQuery 1.2.3+) -->
+     <script src="docs/js/jquery-1.2.6.min.js"></script>
+
+     <!-- Pick a theme, load the plugin & initialize plugin -->
+     <link href="css/theme.default.css" rel="stylesheet">
+     <script src="js/jquery.tablesorter.min.js"></script>
+     <script src="js/jquery.tablesorter.widgets.min.js"></script>
+     <script>
+     function myFunction(id) {
+      var x = document.getElementById(id);
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else { 
+        x.className = x.className.replace(" w3-show", "");
+      }
+     }
+    </script>
+    <style>
+      .mySlides {display:none;}
+
+      body {
+        background-image: url('imgs/background.jpg');
+        background-repeat: repeat;
+      }
+      #cavs {
+      background-image: url('imgs/cavs-background.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100% 100%;
+
+      }
+
+    </style>
+  </head>
+  <body class="w3-center">
+
+   <!-- Navbar -->
+   <div class="w3-top">
+    <ul class="w3-navbar w3-black w3-card-2">
+      <li><a href="index.html" class="w3-hover-white w3-hover-text-black w3-padding-large">HOME</a></li>
+      <li class="w3-dropdown-hover">
+        <a href="index.html#teams" class="w3-hover-white w3-padding-large" title="More">TEAMS ▼</a>  
+        <div class="w3-dropdown-content w3-white w3-card-4">
+          <a href="index.html#cavs">Cleveland Cavaliers</a>
+          <a href="index.html#clips">Los Angeles Clippers</a>
+          <a href="index.html#bos">Boston Celtics</a>
+        </div>
+      </li>
+      <li class="w3-dropdown-hover">
+        <a href="stats.html" class="w3-hover-white w3-padding-large" title="More">STATS ▼</a>  
+        <div class="w3-dropdown-content w3-white w3-card-4">
+          <a href="stats.html#clev">Cleveland Cavaliers</a>
+          <a href="stats.html#los">Los Angeles Clippers</a>
+          <a href="stats.html#bos">Boston Celtics</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!--END Navbar-->
+
+  <!-- Page content -->
+  <div class="w3-content" style="max-width:2000px; margin-top:46px">
+    <img class="w3-image w3-animate-opacity w3-animate-left" src="imgs/nba.jpg" alt="nba teams" style="width:50%">
+    <h1 class="w3-center">The 32 Teams of the NBA</h1>
+    <h1> <a href="http://www.nba.com/">NBA Homepage </a></h1>
+  </div>
+  <div class="w3-container w3-content w3-center w3-padding-64">
+    <!--Cavs slideshow-->
+    <div class="w3-content w3-display-container w3-padding">
+
+      <a class="w3-btn-floating w3-hover-dark-grey w3-display-left" onclick="plusDivs(-1)">&#10094;</a>
+      <a class="w3-btn-floating w3-hover-dark-grey w3-display-right" onclick="plusDivs(1)">&#10095;</a>
+
+      <div class="w3-display-container mySlides">
+        <img src="imgs/lbj-pass.jpg" style="width:100%" alt="lebron">
+        <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+          The Passing Vision
+        </div>
+      </div>
+
+      <div class="w3-display-container mySlides">
+        <img src="imgs/kyrie-dribble.jpg" style="width:100%" alt="kyrie">
+        <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+          The Handles
+        </div>
+      </div>
+
+      <div class="w3-display-container mySlides">
+        <img src="imgs/kevin-hustle.jpg" style="width:100%" alt="kevin">
+        <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
+          The Hustle
+        </div>
+      </div>
+
+      <div class="w3-display-container mySlides">
+        <img src="imgs/jrswish.jpg" style="width:100%" alt="jr">
+        <div class="w3-display-topright w3-large w3-container w3-padding-16 w3-black">
+          The Charisma
+        </div>
+      </div>
+      <!--Clips Slideshow-->
+      <div class="w3-display-container mySlides">
+        <img src="imgs/cp3-iq.jpg" style="width:100%" alt="Chris Paul">
+        <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+          The IQ
+        </div>
+      </div>
+
+      <div class="w3-display-container mySlides">
+        <img src="imgs/bg-flash.jpg" style="width:100%" alt="Blake">
+        <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+          The Flash
+        </div>
+      </div>
+
+      <div class="w3-display-container mySlides">
+        <img src="imgs/dj-fearless.jpg" style="width:100%" alt="DeAndre">
+        <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
+          The Fearlessness
+        </div>
+      </div>
+    </div>
+
+      <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+      }
+      </script>
+    </div>
+
+
+  <!--Teams Page -->
+  <!--Cavs Page-->
+  <div class="w3-container w3-content w3-center w3-padding-64 w3-text-white" id="cavs">
+    <h2 class="w3-wide w3-text-white">THE CLEVELAND CAVALIERS</h2>
+    <h1> <a href="http://www.nba.com/cavaliers/">Cavaliers Homepage </a></h1>
+    <p class="w3-opacity"><i>"All In"</i></p>
+    <p class="w3-justify">This motto was for the 2016 NBA season, the cleveland cavaliers were determined to do what ever it took to win the championship. The motto started from the owner Dan Gilbert making a comment on saying he is all in he is putting everything on the line and leaving nothing on the table. Everyone else in the organization soon followed what Dan was preaching and held nothing back doing anything and everything they could to better themselves to win the championship.</p>
+    <div class="w3-row-padding">
+      <div class="w3-quarter">
+        <p>Lebron James</p>
+        <img src="imgs/lebron.png" class="w3-round" alt="LBJ" style="width:50%">
+      </div>
+      <div class="w3-quarter">
+        <p>Kyrie Irving</p>
+        <img src="imgs/kyrie.png" class="w3-round" alt="Kyrie" style="width:50%">
+      </div>
+      <div class="w3-quarter">
+        <p>Kevin Love</p>
+        <img src="imgs/kevin.png" class="w3-round" alt="Kevin" style="width:50%">
+      </div>
+      <div class="w3-quarter">
+        <p>J.R Smith</p>
+        <img src="imgs/jr.png" class="w3-round" alt="JR" style="width:50%">
+      </div>
+    </div>
+    <div class="w3-accordion w3-light-grey">
+      <button onclick="myFunction('lbj')" class="w3-btn-block">
+        Lebron James Accolades
+      </button>
+      <div id="lbj" class="w3-accordion-content w3-container">
+        <ul class="w3-left-align">
+          <li>3× NBA champion: 2012, 2013, 2016</li>
+          <li>3x NBA Finals MVP: 2012, 2013,2016</li>
+          <li>4x NBA Most Valuable Player: 2009, 2010, 2012, 2013</li>
+          <li>NBA Rookie of the Year: 2004</li>
+          <li>NBA scoring champion: 2008</li>
+          <li>2× NBA All-Star Game MVP: 2006, 2008</li>
+          <li>12× NBA All-Star: 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016</li>
+          <li><p>12× All-NBA:
+            10x First Team: 2006, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016
+            2x Second Team: 2005, 2007</p>
+          </li>
+          <li><p>6× NBA All-Defensive:
+            5x First Team: 2009, 2010, 2011, 2012, 2013
+            Second Team: 2014</p></li>
+            <li>NBA All-Rookie First Team: 2004</li>
+            <li>32× NBA Eastern Conference Player of the Month</li>
+            <li>54× NBA Eastern Conference Player of the Week</li>
+            <li>6× NBA Eastern Conference Rookie of the Month</li>
+        </ul>
+      </div>
+      <button onclick="myFunction('ki')" class="w3-btn-block">
+        Kyrie Irving Accolades
+      </button>
+      <div id="ki" class="w3-accordion-content w3-container">
+        <ul class="w3-left-align">
+          <li>1x NBA Champion: 2016</li>
+          <li>1x NBA All-Star Game MVP: 2014</li>
+          <li>3x NBA All-Star: 2013, 2014, 2015</li>
+          <li>All-NBA Third Team: 2014-15</li>
+          <li>Rookie of the Year: 2011-12</li>
+          <li>All-Rookie First Team: 2011-12</li>
+          <li>Rookie of the Year: 2011-12 </li>
+          <li>All-Rookie First Team: 2011-2012</li>
+        </ul>
+      </div>
+      <button onclick="myFunction('kl')" class="w3-btn-block">
+        Kevin Love Accolades
+      </button>
+      <div id="kl" class="w3-accordion-content w3-container">
+        <ul class="w3-left-align">
+          <li>1x NBA Champion: 2016</li>
+          <li>1x NBA All-Star Game MVP: 2014</li>
+          <li>3x NBA All-Star: 2013, 2014, 2015</li>
+          <li>All-NBA Third Team: 2014-15</li>
+          <li>Rookie of the Year: 2011-12</li>
+          <li>All-Rookie First Team: 2011-12</li>
+          <li>Rookie of the Year: 2011-12 </li>
+          <li>All-Rookie First Team: 2011-2012</li>
+        </ul>
+      </div>
+      <button onclick="myFunction('jr')" class="w3-btn-block">
+        J.R Smith Accolades
+      </button>
+      <div id="jr" class="w3-accordion-content w3-container">
+        <ul class="w3-left-align">
+          <li>1x NBA Champion: 2016</li>
+          <li>1x NBA All-Star Game MVP: 2014</li>
+          <li>3x NBA All-Star: 2013, 2014, 2015</li>
+          <li>All-NBA Third Team: 2014-15</li>
+          <li>Rookie of the Year: 2011-12</li>
+          <li>All-Rookie First Team: 2011-12</li>
+          <li>Rookie of the Year: 2011-12 </li>
+          <li>All-Rookie First Team: 2011-2012</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    <!--End Cavs Page-->
+
+    <!--Clips Page-->
+  <div class="w3-container w3-content w3-center w3-padding-64" id="clips">
+    <h2 class="w3-wide">THE LOS ANGELES CLIPPERS</h2>
+    <h1> <a href="http://www.nba.com/clippers/">Clippers Homepage </a></h1>
+
+    <p class="w3-opacity"><i>"Lob City"</i></p>
+    <p class="w3-justify">This motto was originated with the help of Chris Paul and a combination of Blake Griffin and DeAndre Jordan. They played such flashy and entertaining basketball to watch and if you watched their games you would likely see Blake and DeAndre flying threw the air time after time, recieving alley-op passes from Chris Paul. This soon caught the interested of fans and the phrase lob-city started to define the play of the Clippers.</p>
+    <div class="w3-row-padding">
+      <div class="w3-quarter">
+        <p>Chris Paul</p>
+        <img src="imgs/chris.png" class="w3-round" alt="CP3" style="width:50%">
+      </div>
+      <div class="w3-quarter">
+        <p>Blake Griffen</p>
+        <img src="imgs/blake.png" class="w3-round" alt="Blake" style="width:50%">
+      </div>
+      <div class="w3-quarter">
+        <p>DeAndre Jordan</p>
+        <img src="imgs/deandre.png" class="w3-round" alt="DeAndre" style="width:50%">
+      </div>
+      <div class="w3-quarter">
+        <p>J.J Redick</p>
+        <img src="imgs/jj.png" class="w3-round" alt="JJ" style="width:50%">
+      </div>
+    </div>
+    <div class="w3-accordion w3-light-grey">
+      <button onclick="myFunction('cp3')" class="w3-btn-block">
+        Chris Paul Accolades
+      </button>
+      <div id="cp3" class="w3-accordion-content w3-container">
+        <ul class="w3-left-align">
+          <li>3× NBA champion: 2012, 2013, 2016</li>
+          <li>3x NBA Finals MVP: 2012, 2013,2016</li>
+          <li>4x NBA Most Valuable Player: 2009, 2010, 2012, 2013</li>
+          <li>NBA Rookie of the Year: 2004</li>
+          <li>NBA scoring champion: 2008</li>
+          <li>2× NBA All-Star Game MVP: 2006, 2008</li>
+          <li>12× NBA All-Star: 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016</li>
+          <li><p>12× All-NBA:
+            10x First Team: 2006, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016
+            2x Second Team: 2005, 2007</p>
+          </li>
+          <li><p>6× NBA All-Defensive:
+            5x First Team: 2009, 2010, 2011, 2012, 2013
+            Second Team: 2014</p></li>
+            <li>NBA All-Rookie First Team: 2004</li>
+            <li>32× NBA Eastern Conference Player of the Month</li>
+            <li>54× NBA Eastern Conference Player of the Week</li>
+            <li>6× NBA Eastern Conference Rookie of the Month</li>
+        </ul>
+      </div>
+      <button onclick="myFunction('bg')" class="w3-btn-block">
+        Blake Griffen Accolades
+      </button>
+      <div id="bg" class="w3-accordion-content w3-container">
+        <ul class="w3-left-align">
+          <li>1x NBA Champion: 2016</li>
+          <li>1x NBA All-Star Game MVP: 2014</li>
+          <li>3x NBA All-Star: 2013, 2014, 2015</li>
+          <li>All-NBA Third Team: 2014-15</li>
+          <li>Rookie of the Year: 2011-12</li>
+          <li>All-Rookie First Team: 2011-12</li>
+          <li>Rookie of the Year: 2011-12 </li>
+          <li>All-Rookie First Team: 2011-2012</li>
+        </ul>
+      </div>
+      <button onclick="myFunction('dj')" class="w3-btn-block">
+        DeAndre Jordan Accolades
+      </button>
+      <div id="dj" class="w3-accordion-content w3-container">
+        <ul class="w3-left-align">
+          <li>1x NBA Champion: 2016</li>
+          <li>1x NBA All-Star Game MVP: 2014</li>
+          <li>3x NBA All-Star: 2013, 2014, 2015</li>
+          <li>All-NBA Third Team: 2014-15</li>
+          <li>Rookie of the Year: 2011-12</li>
+          <li>All-Rookie First Team: 2011-12</li>
+          <li>Rookie of the Year: 2011-12 </li>
+          <li>All-Rookie First Team: 2011-2012</li>
+        </ul>
+      </div>
+      <button onclick="myFunction('jj')" class="w3-btn-block">
+        J.J Redick Accolades
+      </button>
+      <div id="jj" class="w3-accordion-content w3-container">
+        <ul class="w3-left-align">
+          <li>1x NBA Champion: 2016</li>
+          <li>1x NBA All-Star Game MVP: 2014</li>
+          <li>3x NBA All-Star: 2013, 2014, 2015</li>
+          <li>All-NBA Third Team: 2014-15</li>
+          <li>Rookie of the Year: 2011-12</li>
+          <li>All-Rookie First Team: 2011-12</li>
+          <li>Rookie of the Year: 2011-12 </li>
+          <li>All-Rookie First Team: 2011-2012</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    <!--End Clips Page-->
+
+    <!--Celtics Page-->
+    <div class="w3-container w3-content w3-center w3-padding-64" id="bos">
+      <h2 class="w3-wide">THE BOSTON CELTICS</h2>
+      <h1> <a href="http://www.nba.com/celtics/">Celtics Homepage </a></h1>
+
+      <p class="w3-opacity"><i>"Boston Strong"</i></p>
+      <p class="w3-justify">This motto was originated with the help of Chris Paul and a combination of Blake Griffin and DeAndre Jordan. They played such flashy and entertaining basketball to watch and if you watched their games you would likely see Blake and DeAndre flying threw the air time after time, recieving alley-op passes from Chris Paul. This soon caught the interested of fans and the phrase lob-city started to define the play of the Clippers.</p>
+      <div class="w3-row-padding">
+        <div class="w3-quarter">
+          <p>Isaiah</p>
+          <img src="imgs/isaiah.png" class="w3-round" alt="IT" style="width:50%">
+        </div>
+        <div class="w3-quarter">
+          <p>Jae Crowder</p>
+          <img src="imgs/jae.png" class="w3-round" alt="Blake" style="width:50%">
+        </div>
+        <div class="w3-quarter">
+          <p>Al Horford</p>
+          <img src="imgs/al.png" class="w3-round" alt="DeAndre" style="width:50%">
+        </div>
+        <div class="w3-quarter">
+          <p>Avery Bradley</p>
+          <img src="imgs/avery.png" class="w3-round" alt="JJ" style="width:50%">
+        </div>
+      </div>
+      <div class="w3-accordion w3-light-grey">
+        <button onclick="myFunction('it')" class="w3-btn-block">
+          Isaiah Thomas Accolades
+        </button>
+        <div id="it" class="w3-accordion-content w3-container">
+          <ul class="w3-left-align">
+            <li>3× NBA champion: 2012, 2013, 2016</li>
+            <li>3x NBA Finals MVP: 2012, 2013,2016</li>
+            <li>4x NBA Most Valuable Player: 2009, 2010, 2012, 2013</li>
+            <li>NBA Rookie of the Year: 2004</li>
+            <li>NBA scoring champion: 2008</li>
+            <li>2× NBA All-Star Game MVP: 2006, 2008</li>
+            <li>12× NBA All-Star: 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016</li>
+            <li><p>12× All-NBA:
+              10x First Team: 2006, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016
+              2x Second Team: 2005, 2007</p>
+            </li>
+            <li><p>6× NBA All-Defensive:
+              5x First Team: 2009, 2010, 2011, 2012, 2013
+              Second Team: 2014</p></li>
+              <li>NBA All-Rookie First Team: 2004</li>
+              <li>32× NBA Eastern Conference Player of the Month</li>
+              <li>54× NBA Eastern Conference Player of the Week</li>
+              <li>6× NBA Eastern Conference Rookie of the Month</li>
+          </ul>
+        </div>
+        <button onclick="myFunction('jc')" class="w3-btn-block">
+          Jae Crowder Accolades
+        </button>
+        <div id="jc" class="w3-accordion-content w3-container">
+          <ul class="w3-left-align">
+            <li>1x NBA Champion: 2016</li>
+            <li>1x NBA All-Star Game MVP: 2014</li>
+            <li>3x NBA All-Star: 2013, 2014, 2015</li>
+            <li>All-NBA Third Team: 2014-15</li>
+            <li>Rookie of the Year: 2011-12</li>
+            <li>All-Rookie First Team: 2011-12</li>
+            <li>Rookie of the Year: 2011-12 </li>
+            <li>All-Rookie First Team: 2011-2012</li>
+          </ul>
+        </div>
+        <button onclick="myFunction('ah')" class="w3-btn-block">
+          Al Horford Accolades
+        </button>
+        <div id="ah" class="w3-accordion-content w3-container">
+          <ul class="w3-left-align">
+            <li>1x NBA Champion: 2016</li>
+            <li>1x NBA All-Star Game MVP: 2014</li>
+            <li>3x NBA All-Star: 2013, 2014, 2015</li>
+            <li>All-NBA Third Team: 2014-15</li>
+            <li>Rookie of the Year: 2011-12</li>
+            <li>All-Rookie First Team: 2011-12</li>
+            <li>Rookie of the Year: 2011-12 </li>
+            <li>All-Rookie First Team: 2011-2012</li>
+          </ul>
+        </div>
+        <button onclick="myFunction('ab')" class="w3-btn-block">
+          Avery Bradley Accolades
+        </button>
+        <div id="ab" class="w3-accordion-content w3-container">
+          <ul class="w3-left-align">
+            <li>1x NBA Champion: 2016</li>
+            <li>1x NBA All-Star Game MVP: 2014</li>
+            <li>3x NBA All-Star: 2013, 2014, 2015</li>
+            <li>All-NBA Third Team: 2014-15</li>
+            <li>Rookie of the Year: 2011-12</li>
+            <li>All-Rookie First Team: 2011-12</li>
+            <li>Rookie of the Year: 2011-12 </li>
+            <li>All-Rookie First Team: 2011-2012</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--End Celtics Page-->
+  </body>
+  </html>

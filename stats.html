@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Milestone 2</title>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1">
+  <!-- Link to w3.css external style sheet -->
+  <link rel="stylesheet" type="text/css" href="docs/css/w3.css">
+	<!-- Link to font awesome icons style sheet 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">-->
+  <link href="docs/css/jq.css" rel="stylesheet">
+  <!-- Pick a theme, load the plugin & initialize plugin -->
+  <link href="css/theme.default.css" rel="stylesheet">
+
+  <!-- jQuery: required (tablesorter works with jQuery 1.2.3+) -->
+  <script src="docs/js/jquery-1.2.6.min.js"></script>
+  <script src="js/jquery.tablesorter.min.js"></script>
+  <script src="js/jquery.tablesorter.widgets.min.js"></script>
+  <script>
+  $(function(){
+  $('table').tablesorter({
+    widgets        : ['zebra', 'columns'],
+    usNumberFormat : false,
+    sortReset      : true,
+    sortRestart    : true,
+
+  });
+  });
+  </script>
+  <style>
+    body {
+      background-image: url('imgs/background.jpg');
+      }
+    #cavs {
+      background-image: url('imgs/cavs-background.jpg');
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+<body class="w3-center">
+ 
+<!-- Navbar -->
+  <div class="w3-top">
+    <ul class="w3-navbar w3-black w3-card-2">
+      <li><a href="index.html" class="w3-hover-white w3-hover-text-black w3-padding-large">HOME</a></li>
+      <li class="w3-dropdown-hover">
+        <a href="index.html#teams" class="w3-hover-white w3-padding-large" title="More">TEAMS ▼</a>  
+        <div class="w3-dropdown-content w3-white w3-card-4">
+          <a href="index.html#cavs">Cleveland Cavaliers</a>
+          <a href="index.html#clips">Los Angeles Clippers</a>
+          <a href="index.html#bos">Boston Celtics</a>
+
+        </div>
+      </li>
+     <li class="w3-dropdown-hover">
+        <a href="stats.html" class="w3-hover-white w3-padding-large" title="More">STATS ▼</a>  
+        <div class="w3-dropdown-content w3-white w3-card-4">
+          <a href="stats.html#clev">Cleveland Cavaliers</a>
+          <a href="stats.html#los">Los Angeles Clippers</a>
+          <a href="stats.html#bos">Boston Celtics</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+<!--End Navbar-->
+
+<!-- Page content -->
+    <div class="w3-content w3-center" style="max-width:2000px; margin-top:46px">
+    <img class="w3-image w3-animate-opacity w3-animate-left" src="imgs/nba.jpg" alt="nba teams" style="width:50%">
+    <h1 class="w3-center w3-container">The 32 Teams of the NBA</h1>
+  </div>
+  <h1> <a href="http://stats.nba.com/">Stats Homepage </a></h1>
+
+
+  <!-- table For Stats-->
+      <!--Cleveland stats-->
+  <div class="demo w3-container">
+        <p id="clev"><strong>Cavaliers Team Leaders:</strong></p>
+        <img class="w3-image" src="imgs/cavs-logo.png" alt="cavs logo">
+        <h5> Click on Headers to Sort Table </h5>
+
+
+       <table class="tablesorter w3-table-all w3-hoverable ">
+        <thead>
+          <tr>
+             <th>Player</th>
+             <th>Points</th>
+             <th>Assists</th>
+             <th>Rebounds</th>
+             <th>Steals</th>
+             <th>Turnovers</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+             <td>LeBron James</td>
+             <td>23.4</td>
+             <td>9.6</td>
+             <td>8.9</td>
+             <td>1.1</td>
+             <td>3.7</td>
+          </tr>
+          <tr>
+             <td>Kyrie Irving</td> 
+             <td>23.4</td>
+             <td>4.5</td>
+             <td>3.5</td>
+             <td>0.8</td>
+             <td>2.5</td>
+          </tr>
+          <tr>
+             <td>Kevin Love</td>       
+             <td>21.0</td>
+             <td>1.4</td>
+             <td>10.8</td>
+             <td>0.9</td>
+             <td>2</td>
+          </tr>
+          <tr>
+             <td>J.R Smith</td>
+             <td>8</td>
+             <td>1.4</td>
+             <td>2.5</td>
+             <td>1.8</td>
+             <td>0.4</td>
+          </tr>
+        </tbody>
+       </table>
+
+    </div>
+    <!--End Cavs Stats-->
+    <br>
+    <!--Clipers stats-->
+  <div class="demo" id="los">
+        <p><strong>Clippers Team Leaders:</strong></p>
+        <img class="w3-image" src="imgs/clips-logo.jpg" alt="clips logo"> 
+        <h5> Click on Headers to Sort Table </h5>
+
+       <table class="tablesorter w3-table-all w3-hoverable" > 
+          <thead>
+          <tr>
+             <th>Player</th>
+             <th>Points</th>
+             <th>Assists</th>
+             <th>Rebounds</th>
+             <th>Blocks</th>
+             <th>Steals</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+             <th>Chris Paul</th>
+             <td>18.3</td>
+             <td>8.3</td>
+             <td>5.2</td>
+             <td>3.1</td>
+             <td>1.8</td>
+          </tr>
+          <tr>
+             <th>Blake Griffin</th> 
+             <td>20.6</td>
+             <td>4</td>
+             <td>9.3</td>
+             <td>1.3</td>
+             <td>1.6</td>
+          </tr>
+          <tr>
+             <th>DeAndre Jordan</th>       
+             <td>10.3</td>
+             <td>0.7</td>
+             <td>12.5</td>
+             <td>0.5</td>
+             <td>1.8</td>
+          </tr>
+          <tr>
+             <th>J.J Redick</th>
+             <td>14.6</td>
+             <td>0.9</td>
+             <td>1.8</td>
+             <td>1.1</td>
+             <td>1.3</td>
+          </tr> 
+        </tbody>
+       </table>
+    
+    </div>
+    <!--End Clips Stats-->
+    <!--Celtics Stats-->
+    <div class="demo" id="bos">
+        <p><strong>Clippers Team Leaders:</strong></p>
+        <img class="w3-image" src="imgs/bos-logo.png" alt="clips logo"> 
+        <h5> Click on Headers to Sort Table </h5>
+
+       <table class="tablesorter w3-table-all w3-hoverable" > 
+          <thead>
+          <tr>
+             <th>Player</th>
+             <th>Points</th>
+             <th>Assists</th>
+             <th>Rebounds</th>
+             <th>Blocks</th>
+             <th>Steals</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+             <th>Isaiah Thomas</th>
+             <td>26.1</td>
+             <td>6.2</td>
+             <td>2.6</td>
+             <td>0.2</td>
+             <td>0.7</td>
+          </tr>
+          <tr>
+             <th>Al Horford</th> 
+             <td>14.0</td>
+             <td>5.0</td>
+             <td>6.6</td>
+             <td>2.5</td>
+             <td>0.5</td>
+          </tr>
+          <tr>
+             <th>Jae Crowder</th>       
+             <td>13.1</td>
+             <td>2.1</td>
+             <td>5.1</td>
+             <td>0.5</td>
+             <td>1.3</td>
+          </tr>
+          <tr>
+             <th>Avery Bradley</th>
+             <td>17.7</td>
+             <td>2.7</td>
+             <td>7.8</td>
+             <td>0.3</td>
+             <td>1.0</td>
+          </tr> 
+        </tbody>
+       </table>
+    
+    </div>
+
+    <!--Standings.-->
+    <div class="w3-container w3-margin" id="stand">
+        <p><strong>Current Standing:</strong></p>
+        <table class="w3-table-all w3-hoverable"> 
+          <tr class="w3-black">
+             <th></th>
+             <th>Wins</th>
+             <th>Loses</th>
+             <th>Home</th>
+             <th>Road</th>
+             <th>Last 10 Games</th>
+             <th>Current Streak</th>
+             <th>Rank</th>
+          </tr>
+          <tr>
+             <th>Cavs</th>
+             <td>14</td>
+             <td>5</td>
+             <td>9-2</td>
+             <td>5-3</td>
+             <td>6-4</td>
+             <td>1 Win</td>
+             <td>3rd</td>
+          </tr>
+          <tr>
+             <th>Clips</th> 
+             <td>16</td>
+             <td>6</td>
+             <td>7-3</td>
+             <td>9-3</td>
+             <td>6-4</td>
+             <td>1 Lose</td>
+             <td>4th</td>
+          </tr>
+          <tr>
+             <th>Bos</th>
+             <td>12</td>
+             <td>9</td>
+             <td>5-4</td>
+             <td>7-5</td>
+             <td>6-4</td>
+             <td>1 Lose</td>
+             <td>10th</td>
+          </tr>
+       </table>
+    </div>
+</body>
+</html>
